@@ -2,12 +2,25 @@ package com.endes.biblioteca;
 
 import java.util.List;
 
-public class Libro {
+public abstract class Libro {
     private String isbn;
     private String title;
     private List<Autor> autores;
-	
-    public String getIsbn() {
+    private String summary;
+    private String publication_date;
+    Integer number_pages;
+    
+    public Libro(String isbn, String title, List<Autor> autores, String summary, String publication_date,
+			Integer number_pages) {
+		this.isbn = isbn;
+		this.title = title;
+		this.autores = autores;
+		this.summary = summary;
+		this.publication_date = publication_date;
+		this.number_pages = number_pages;
+	}
+    
+	public String getIsbn() {
 		return isbn;
 	}
 	public void setIsbn(String isbn) {
